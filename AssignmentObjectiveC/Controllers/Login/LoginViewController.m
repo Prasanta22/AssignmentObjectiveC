@@ -24,13 +24,12 @@
 - (IBAction)loginButtonAction:(UIButton *)sender {
     Alert *gcvc = [[Alert alloc]init];
     [gcvc showAlertMsg:self title:@"title" message:@"jsbjb"];
-//    LoginViewModel *userObj = [[LoginViewModel alloc] init];
-//    // Here you can get the data from login form
-//    // and proceed to authenticate process
-//    NSString *email = _emailTextField.text;
-//    NSString *password = _passwordTextField.text;
-//    [userObj loginWithEmail:email andPassword:password];
-    
+    LoginViewModel *userObj = [[LoginViewModel alloc] init];
+    // Here you can get the data from login form
+    // and proceed to authenticate process
+    NSString *email = _emailTextField.text;
+    NSString *password = _passwordTextField.text;
+    [userObj loginWithEmail:email andPassword:password];
     
 }
 
