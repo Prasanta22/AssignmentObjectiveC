@@ -7,7 +7,7 @@
 
 #import "Email.h"
 
-@implementation NSObject (Email)
+@implementation Email: NSObject
 
 /// Email validation check
 - (BOOL)validateEmailWithString:(NSString*)email

@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSObject (Email)
+@interface Email: NSObject
 - (BOOL)validateEmailWithString:(NSString*)email;
 @end
 

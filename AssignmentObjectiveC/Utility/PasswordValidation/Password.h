@@ -9,8 +9,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSObject (Password)
--(BOOL) isPasswordValid:(NSString *)password;
+@interface Password: NSObject
+-(BOOL)isValidPassword:(NSString *)passwordString;
 @end
 
 NS_ASSUME_NONNULL_END
