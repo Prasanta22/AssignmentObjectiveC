@@ -21,6 +21,8 @@
 		92842DC327D61D8A0084A2A8 /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 92842DC227D61D8A0084A2A8 /* Alert.m */; };
 		92842DC727D634950084A2A8 /* Password.m in Sources */ = {isa = PBXBuildFile; fileRef = 92842DC627D634950084A2A8 /* Password.m */; };
 		92842DCB27D6350C0084A2A8 /* Email.m in Sources */ = {isa = PBXBuildFile; fileRef = 92842DCA27D6350C0084A2A8 /* Email.m */; };
+		92842DD027D73B700084A2A8 /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92842DCF27D73B700084A2A8 /* RegistrationViewController.m */; };
+		92842DD327D752EC0084A2A8 /* RegistrationViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 92842DD227D752EC0084A2A8 /* RegistrationViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,10 @@
 		92842DC627D634950084A2A8 /* Password.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Password.m; sourceTree = "<group>"; };
 		92842DC927D6350C0084A2A8 /* Email.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Email.h; sourceTree = "<group>"; };
 		92842DCA27D6350C0084A2A8 /* Email.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Email.m; sourceTree = "<group>"; };
+		92842DCE27D73B700084A2A8 /* RegistrationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
+		92842DCF27D73B700084A2A8 /* RegistrationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
+		92842DD127D752EC0084A2A8 /* RegistrationViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistrationViewModel.h; sourceTree = "<group>"; };
+		92842DD227D752EC0084A2A8 /* RegistrationViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +158,7 @@
 		92842DB527D5FC9F0084A2A8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				92842DCC27D73B3A0084A2A8 /* Registration */,
 				92842DB627D5FCD10084A2A8 /* Login */,
 			);
 			path = Controllers;
@@ -169,6 +176,7 @@
 		92842DBA27D600950084A2A8 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				92842DCD27D73B4A0084A2A8 /* Registration */,
 				92842DBE27D602690084A2A8 /* Login */,
 			);
 			path = ViewModels;
@@ -218,6 +226,24 @@
 				92842DCA27D6350C0084A2A8 /* Email.m */,
 			);
 			path = EmailValidation;
+			sourceTree = "<group>";
+		};
+		92842DCC27D73B3A0084A2A8 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				92842DCE27D73B700084A2A8 /* RegistrationViewController.h */,
+				92842DCF27D73B700084A2A8 /* RegistrationViewController.m */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		92842DCD27D73B4A0084A2A8 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				92842DD127D752EC0084A2A8 /* RegistrationViewModel.h */,
+				92842DD227D752EC0084A2A8 /* RegistrationViewModel.m */,
+			);
+			path = Registration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,11 +378,13 @@
 			files = (
 				92842DCB27D6350C0084A2A8 /* Email.m in Sources */,
 				92842D8227D5CAD90084A2A8 /* AppDelegate.m in Sources */,
+				92842DD327D752EC0084A2A8 /* RegistrationViewModel.m in Sources */,
 				92842D9327D5CADB0084A2A8 /* main.m in Sources */,
 				92842D8527D5CAD90084A2A8 /* SceneDelegate.m in Sources */,
 				92842DC727D634950084A2A8 /* Password.m in Sources */,
 				92842DC327D61D8A0084A2A8 /* Alert.m in Sources */,
 				92842DBD27D601350084A2A8 /* LoginViewModel.m in Sources */,
+				92842DD027D73B700084A2A8 /* RegistrationViewController.m in Sources */,
 				92842DB927D5FD090084A2A8 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

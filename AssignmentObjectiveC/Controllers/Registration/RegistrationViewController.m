@@ -1,37 +1,40 @@
 //
-//  LoginViewController.m
+//  RegistrationViewController.m
 //  AssignmentObjectiveC
 //
-//  Created by Prasanta Santikari on 07/03/22.
+//  Created by Prasanta Santikari on 08/03/22.
 //
 
-#import "LoginViewController.h"
-#import "LoginViewModel.h"
+#import "RegistrationViewController.h"
+#import "RegistrationViewModel.h"
 #import "Alert.h"
 
-@interface LoginViewController ()
+@interface RegistrationViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *userNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
-
 @end
 
-@implementation LoginViewController
+@implementation RegistrationViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
-- (IBAction)loginButtonAction:(UIButton *)sender {
+- (IBAction)registrationButtonAction:(UIButton *)sender {
     Alert *alert = [[Alert alloc]init];
-    LoginViewModel *loginObj = [[LoginViewModel alloc] init];
+    RegistrationViewModel *registerObj = [[RegistrationViewModel alloc] init];
     
-    // Here you can get the data from login form
+    // Here you can get the data from register form
     // and proceed to authenticate process
+    NSString *userName = _userNameTextField.text;
     NSString *email = _emailTextField.text;
     NSString *password = _passwordTextField.text;
     
-    [loginObj loginWithEmail:email password:password completion:^(NSString* message) {
-        if ([message  isEqual: @"Email Required"]) {
+    [registerObj registerWithEmail:email password:password username:userName completion:^(NSString* message) {
+        if ([message  isEqual: @"Username Required"]) {
+            [alert showAlertMsg:self title:@"Username" message:@"Username Is Required"];
+        } else if ([message  isEqual: @"Email Required"]) {
             [alert showAlertMsg:self title:@"Email" message:@"Email Is Required"];
         } else if ([message  isEqual: @"Password Required"]) {
             [alert showAlertMsg:self title:@"Password" message:@"Password Is Required"];
