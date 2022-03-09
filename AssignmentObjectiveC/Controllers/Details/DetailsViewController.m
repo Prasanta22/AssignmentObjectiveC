@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self getDataFrom:@"https://randomuser.me/api/?results=8"];
 }
 
 - (void) getDataFrom:(NSString *)url{
@@ -29,9 +30,13 @@
       ^(NSData * _Nullable data,
         NSURLResponse * _Nullable response,
         NSError * _Nullable error) {
+        NSDictionary *results = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        self.dataArray= results[@"results"];
+        NSLog(@"Data Array: %@", self.dataArray);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
         
-        NSString *myString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        NSLog(@"Data received: %@", myString);
     }] resume];
 }
 
@@ -42,6 +47,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellReuseID = @"DetailsTableViewCell";
     DetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellReuseID];
+    cell.nameLabel.text = self.dataArray[indexPath.row][@"name"][@"title"];
+    cell.peopleImageView.image = [UIImage imageNamed:self.dataArray[indexPath.row][@"picture"][@"thumbnail"]];
     return cell;
 }
 
