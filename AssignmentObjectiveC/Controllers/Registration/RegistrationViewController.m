@@ -44,8 +44,15 @@
             [alert showAlertMsg:self title:@"Password" message:@"Password must be minimum 8 characters,at least 1 Uppercase Alphabet, 1 Lowercase Alphabet,1 Number and 1 Special Character"];
         } else {
             [alert showAlertMsg:self title:@"Alert" message:@"Successful"];
+            [self clearText];
         }
     }];
+}
+
+-(void)clearText {
+    _userNameTextField.text = @"";
+    _emailTextField.text = @"";
+    _passwordTextField.text = @"";
 }
 
 @end
