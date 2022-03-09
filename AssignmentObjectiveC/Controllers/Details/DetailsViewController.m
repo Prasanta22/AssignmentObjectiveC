@@ -9,6 +9,7 @@
 #import "DetailsTableViewCell.h"
 
 @interface DetailsViewController () <UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicatorView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataArray;
 @end
@@ -22,6 +23,7 @@
 }
 
 - (void) getDataFrom:(NSString *)url{
+    [self.activityIndicatorView startAnimating];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setHTTPMethod:@"GET"];
     [request setURL:[NSURL URLWithString:url]];
@@ -34,6 +36,7 @@
         self.dataArray= results[@"results"];
         NSLog(@"Data Array: %@", self.dataArray);
         dispatch_async(dispatch_get_main_queue(), ^{
+            [self.activityIndicatorView stopAnimating];
             [self.tableView reloadData];
         });
         
@@ -47,8 +50,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellReuseID = @"DetailsTableViewCell";
     DetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellReuseID];
-    cell.nameLabel.text = self.dataArray[indexPath.row][@"name"][@"title"];
-    cell.peopleImageView.image = [UIImage imageNamed:self.dataArray[indexPath.row][@"picture"][@"thumbnail"]];
+    NSString *str = [NSString stringWithFormat: @"%@ %@ %@",
+                     self.dataArray[indexPath.row][@"name"][@"title"],self.dataArray[indexPath.row][@"name"][@"first"], self.dataArray[indexPath.row][@"name"][@"last"]];
+    cell.nameLabel.text = str;
+    cell.peopleImageView.image=[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.dataArray[indexPath.row][@"picture"][@"thumbnail"]]]];
     return cell;
 }
 

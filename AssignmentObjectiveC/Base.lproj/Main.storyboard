@@ -248,6 +248,11 @@
                                     <outlet property="delegate" destination="Q0n-R4-DLV" id="BUr-bk-gxJ"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" id="S8p-5w-D9A">
+                                <rect key="frame" x="0.0" y="426" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" systemColor="systemPinkColor"/>
+                            </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v23-rL-rSK">
                                 <rect key="frame" x="313" y="115" width="81" height="36"/>
                                 <constraints>
@@ -276,6 +281,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="6DR-Wo-yaH"/>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="S8p-5w-D9A" id="B77-2f-VUL"/>
                         <outlet property="tableView" destination="200-cs-NS1" id="5ZS-6X-gbN"/>
                     </connections>
                 </viewController>
