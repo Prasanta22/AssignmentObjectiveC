@@ -189,10 +189,10 @@
             </objects>
             <point key="canvasLocation" x="2629" y="84"/>
         </scene>
-        <!--View Controller-->
+        <!--Details View Controller-->
         <scene sceneID="6ko-JJ-DUa">
             <objects>
-                <viewController id="Q0n-R4-DLV" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailsViewController" id="Q0n-R4-DLV" customClass="DetailsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Odh-J7-Zxa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -207,7 +207,7 @@
                                 <rect key="frame" x="0.0" y="124" width="414" height="738"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="81" id="p5N-vU-UAO">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DetailsTableViewCell" rowHeight="81" id="p5N-vU-UAO" customClass="DetailsTableViewCell">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="81"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p5N-vU-UAO" id="AQw-xJ-kyp">
@@ -237,8 +237,16 @@
                                                 <constraint firstItem="xVq-Hx-YMW" firstAttribute="leading" secondItem="c6Y-8Z-EwG" secondAttribute="trailing" constant="25" id="txa-r2-s5D"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="xVq-Hx-YMW" id="gJn-lp-fzB"/>
+                                            <outlet property="peopleImageView" destination="c6Y-8Z-EwG" id="ADg-jn-ohz"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Q0n-R4-DLV" id="ENr-8b-zbh"/>
+                                    <outlet property="delegate" destination="Q0n-R4-DLV" id="BUr-bk-gxJ"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v23-rL-rSK">
                                 <rect key="frame" x="313" y="71" width="81" height="36"/>
@@ -266,6 +274,9 @@
                             <constraint firstItem="200-cs-NS1" firstAttribute="top" secondItem="aIl-Pc-vQZ" secondAttribute="bottom" constant="20" id="xUx-84-bbt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="200-cs-NS1" id="5ZS-6X-gbN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h41-v3-xMC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -23,6 +23,8 @@
 		92842DCB27D6350C0084A2A8 /* Email.m in Sources */ = {isa = PBXBuildFile; fileRef = 92842DCA27D6350C0084A2A8 /* Email.m */; };
 		92842DD027D73B700084A2A8 /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92842DCF27D73B700084A2A8 /* RegistrationViewController.m */; };
 		92842DD327D752EC0084A2A8 /* RegistrationViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 92842DD227D752EC0084A2A8 /* RegistrationViewModel.m */; };
+		92842DDC27D86BFB0084A2A8 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92842DDB27D86BFB0084A2A8 /* DetailsViewController.m */; };
+		92842DE027D86C1B0084A2A8 /* DetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92842DDF27D86C1B0084A2A8 /* DetailsTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,10 @@
 		92842DCF27D73B700084A2A8 /* RegistrationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
 		92842DD127D752EC0084A2A8 /* RegistrationViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistrationViewModel.h; sourceTree = "<group>"; };
 		92842DD227D752EC0084A2A8 /* RegistrationViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewModel.m; sourceTree = "<group>"; };
+		92842DDA27D86BFB0084A2A8 /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		92842DDB27D86BFB0084A2A8 /* DetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		92842DDE27D86C1B0084A2A8 /* DetailsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsTableViewCell.h; sourceTree = "<group>"; };
+		92842DDF27D86C1B0084A2A8 /* DetailsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +164,7 @@
 		92842DB527D5FC9F0084A2A8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				92842DD927D86BE50084A2A8 /* Details */,
 				92842DCC27D73B3A0084A2A8 /* Registration */,
 				92842DB627D5FCD10084A2A8 /* Login */,
 			);
@@ -244,6 +251,25 @@
 				92842DD227D752EC0084A2A8 /* RegistrationViewModel.m */,
 			);
 			path = Registration;
+			sourceTree = "<group>";
+		};
+		92842DD927D86BE50084A2A8 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				92842DDA27D86BFB0084A2A8 /* DetailsViewController.h */,
+				92842DDB27D86BFB0084A2A8 /* DetailsViewController.m */,
+				92842DDD27D86C030084A2A8 /* Cell */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		92842DDD27D86C030084A2A8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				92842DDE27D86C1B0084A2A8 /* DetailsTableViewCell.h */,
+				92842DDF27D86C1B0084A2A8 /* DetailsTableViewCell.m */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,9 +404,11 @@
 			files = (
 				92842DCB27D6350C0084A2A8 /* Email.m in Sources */,
 				92842D8227D5CAD90084A2A8 /* AppDelegate.m in Sources */,
+				92842DDC27D86BFB0084A2A8 /* DetailsViewController.m in Sources */,
 				92842DD327D752EC0084A2A8 /* RegistrationViewModel.m in Sources */,
 				92842D9327D5CADB0084A2A8 /* main.m in Sources */,
 				92842D8527D5CAD90084A2A8 /* SceneDelegate.m in Sources */,
+				92842DE027D86C1B0084A2A8 /* DetailsTableViewCell.m in Sources */,
 				92842DC727D634950084A2A8 /* Password.m in Sources */,
 				92842DC327D61D8A0084A2A8 /* Alert.m in Sources */,
 				92842DBD27D601350084A2A8 /* LoginViewModel.m in Sources */,
