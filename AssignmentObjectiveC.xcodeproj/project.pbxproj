@@ -25,6 +25,8 @@
 		92842DD327D752EC0084A2A8 /* RegistrationViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 92842DD227D752EC0084A2A8 /* RegistrationViewModel.m */; };
 		92842DDC27D86BFB0084A2A8 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92842DDB27D86BFB0084A2A8 /* DetailsViewController.m */; };
 		92842DE027D86C1B0084A2A8 /* DetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92842DDF27D86C1B0084A2A8 /* DetailsTableViewCell.m */; };
+		92842DE327D9CDC10084A2A8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92842DE227D9CDC10084A2A8 /* Security.framework */; };
+		92842DE627D9CDDA0084A2A8 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 92842DE427D9CDDA0084A2A8 /* KeychainItemWrapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,9 @@
 		92842DDB27D86BFB0084A2A8 /* DetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		92842DDE27D86C1B0084A2A8 /* DetailsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsTableViewCell.h; sourceTree = "<group>"; };
 		92842DDF27D86C1B0084A2A8 /* DetailsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsTableViewCell.m; sourceTree = "<group>"; };
+		92842DE227D9CDC10084A2A8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		92842DE427D9CDDA0084A2A8 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
+		92842DE527D9CDDA0084A2A8 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92842DE327D9CDC10084A2A8 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +118,7 @@
 				92842D9B27D5CADB0084A2A8 /* AssignmentObjectiveCTests */,
 				92842DA527D5CADB0084A2A8 /* AssignmentObjectiveCUITests */,
 				92842D7E27D5CAD90084A2A8 /* Products */,
+				92842DE127D9CDC10084A2A8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +139,8 @@
 				92842D8127D5CAD90084A2A8 /* AppDelegate.m */,
 				92842D8327D5CAD90084A2A8 /* SceneDelegate.h */,
 				92842D8427D5CAD90084A2A8 /* SceneDelegate.m */,
+				92842DE527D9CDDA0084A2A8 /* KeychainItemWrapper.h */,
+				92842DE427D9CDDA0084A2A8 /* KeychainItemWrapper.m */,
 				92842DBF27D61D600084A2A8 /* Utility */,
 				92842DBA27D600950084A2A8 /* ViewModels */,
 				92842DB527D5FC9F0084A2A8 /* Controllers */,
@@ -272,6 +281,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		92842DE127D9CDC10084A2A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92842DE227D9CDC10084A2A8 /* Security.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -403,6 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92842DCB27D6350C0084A2A8 /* Email.m in Sources */,
+				92842DE627D9CDDA0084A2A8 /* KeychainItemWrapper.m in Sources */,
 				92842D8227D5CAD90084A2A8 /* AppDelegate.m in Sources */,
 				92842DDC27D86BFB0084A2A8 /* DetailsViewController.m in Sources */,
 				92842DD327D752EC0084A2A8 /* RegistrationViewModel.m in Sources */,

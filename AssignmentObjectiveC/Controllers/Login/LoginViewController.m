@@ -10,6 +10,7 @@
 #import "Alert.h"
 #import "DetailsViewController.h"
 #import "RegistrationViewController.h"
+#import "KeychainItemWrapper.h"
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
@@ -48,7 +49,16 @@
         } else if ([message  isEqual: @"Password Validate"]) {
             [alert showAlertMsg:self title:@"Password" message:@"Password must be minimum 8 characters,at least 1 Uppercase Alphabet, 1 Lowercase Alphabet,1 Number and 1 Special Character"];
         } else {
-            [self navigateToDetailsVC];
+            KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"YourAppLogin" accessGroup:nil];
+            NSData *password22 = [keychainItem objectForKey:(__bridge id)kSecValueData];
+            NSString *emailData = [keychainItem objectForKey:(__bridge id)kSecAttrAccount];
+            NSString* passwordValue = [[NSString alloc] initWithData:password22 encoding:NSUTF8StringEncoding];
+            if ([self.emailTextField.text isEqual:emailData] && [self.passwordTextField.text isEqual:passwordValue]) {
+                [self navigateToDetailsVC];
+            } else {
+                [alert showAlertMsg:self title:@"Alert" message:@"User Not Found"];
+            }
+            
         }
     }];
 }
@@ -71,4 +81,5 @@
             [storyboard instantiateViewControllerWithIdentifier:@"RegistrationViewController"];
     [self.navigationController pushViewController:obj animated:YES];
 }
+
 @end

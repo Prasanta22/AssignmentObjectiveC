@@ -8,6 +8,7 @@
 #import "RegistrationViewController.h"
 #import "RegistrationViewModel.h"
 #import "Alert.h"
+#import "KeychainItemWrapper.h"
 
 @interface RegistrationViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *userNameTextField;
@@ -44,6 +45,9 @@
             [alert showAlertMsg:self title:@"Password" message:@"Password must be minimum 8 characters,at least 1 Uppercase Alphabet, 1 Lowercase Alphabet,1 Number and 1 Special Character"];
         } else {
             [alert showAlertMsg:self title:@"Alert" message:@"Successful"];
+            KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"YourAppLogin" accessGroup:nil];
+            [keychainItem setObject:password forKey:(__bridge id)kSecValueData];
+            [keychainItem setObject:email forKey:(__bridge id)kSecAttrAccount];
             [self clearText];
         }
     }];

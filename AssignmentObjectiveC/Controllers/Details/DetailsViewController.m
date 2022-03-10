@@ -7,6 +7,7 @@
 
 #import "DetailsViewController.h"
 #import "DetailsTableViewCell.h"
+#import "KeychainItemWrapper.h"
 
 @interface DetailsViewController () <UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicatorView;
@@ -55,6 +56,11 @@
     cell.nameLabel.text = str;
     cell.peopleImageView.image=[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.dataArray[indexPath.row][@"picture"][@"thumbnail"]]]];
     return cell;
+}
+- (IBAction)logoutButtonAction:(UIButton *)sender {
+    KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"YourAppLogin" accessGroup:nil];
+    [keychainItem resetKeychainItem];
+    [self.navigationController popViewControllerAnimated:true];
 }
 
 
