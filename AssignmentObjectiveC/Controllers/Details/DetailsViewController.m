@@ -11,8 +11,6 @@
 
 @interface DetailsViewController () <UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicatorView;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) NSMutableArray *dataArray;
 @end
 
 @implementation DetailsViewController

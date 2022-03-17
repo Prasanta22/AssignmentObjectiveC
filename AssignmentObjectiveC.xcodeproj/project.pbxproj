@@ -27,6 +27,10 @@
 		92842DE027D86C1B0084A2A8 /* DetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92842DDF27D86C1B0084A2A8 /* DetailsTableViewCell.m */; };
 		92842DE327D9CDC10084A2A8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92842DE227D9CDC10084A2A8 /* Security.framework */; };
 		92842DE627D9CDDA0084A2A8 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 92842DE427D9CDDA0084A2A8 /* KeychainItemWrapper.m */; };
+		92842DE927DF07CD0084A2A8 /* LoginViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92842DE827DF07CD0084A2A8 /* LoginViewControllerTests.m */; };
+		92842DEB27DF428A0084A2A8 /* RegistrationViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92842DEA27DF428A0084A2A8 /* RegistrationViewControllerTests.m */; };
+		92842DEE27E061300084A2A8 /* PasswordTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92842DED27E061300084A2A8 /* PasswordTests.m */; };
+		92842DF227E0686A0084A2A8 /* DetailsViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92842DF127E0686A0084A2A8 /* DetailsViewControllerTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +87,10 @@
 		92842DE227D9CDC10084A2A8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		92842DE427D9CDDA0084A2A8 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
 		92842DE527D9CDDA0084A2A8 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		92842DE827DF07CD0084A2A8 /* LoginViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewControllerTests.m; sourceTree = "<group>"; };
+		92842DEA27DF428A0084A2A8 /* RegistrationViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewControllerTests.m; sourceTree = "<group>"; };
+		92842DED27E061300084A2A8 /* PasswordTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordTests.m; sourceTree = "<group>"; };
+		92842DF127E0686A0084A2A8 /* DetailsViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewControllerTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				92842D9C27D5CADB0084A2A8 /* AssignmentObjectiveCTests.m */,
+				92842DEC27E061160084A2A8 /* Utility */,
+				92842DE727DF07A00084A2A8 /* Controller */,
 			);
 			path = AssignmentObjectiveCTests;
 			sourceTree = "<group>";
@@ -287,6 +297,24 @@
 				92842DE227D9CDC10084A2A8 /* Security.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		92842DE727DF07A00084A2A8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				92842DE827DF07CD0084A2A8 /* LoginViewControllerTests.m */,
+				92842DEA27DF428A0084A2A8 /* RegistrationViewControllerTests.m */,
+				92842DF127E0686A0084A2A8 /* DetailsViewControllerTests.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		92842DEC27E061160084A2A8 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				92842DED27E061300084A2A8 /* PasswordTests.m */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,7 +467,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92842DEE27E061300084A2A8 /* PasswordTests.m in Sources */,
+				92842DE927DF07CD0084A2A8 /* LoginViewControllerTests.m in Sources */,
+				92842DF227E0686A0084A2A8 /* DetailsViewControllerTests.m in Sources */,
 				92842D9D27D5CADB0084A2A8 /* AssignmentObjectiveCTests.m in Sources */,
+				92842DEB27DF428A0084A2A8 /* RegistrationViewControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

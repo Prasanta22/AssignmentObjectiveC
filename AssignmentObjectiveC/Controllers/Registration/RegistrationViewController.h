@@ -10,7 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RegistrationViewController : UIViewController
-
+-(void)clearText;
+- (IBAction)registrationButtonAction:(UIButton *)sender;
 @end
 
 NS_ASSUME_NONNULL_END
