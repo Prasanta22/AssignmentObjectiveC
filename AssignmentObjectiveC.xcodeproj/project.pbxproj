@@ -119,6 +119,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9227E246280424140058065D /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				92842DE527D9CDDA0084A2A8 /* KeychainItemWrapper.h */,
+				92842DE427D9CDDA0084A2A8 /* KeychainItemWrapper.m */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
 		92842D7427D5CAD90084A2A8 = {
 			isa = PBXGroup;
 			children = (
@@ -147,8 +156,6 @@
 				92842D8127D5CAD90084A2A8 /* AppDelegate.m */,
 				92842D8327D5CAD90084A2A8 /* SceneDelegate.h */,
 				92842D8427D5CAD90084A2A8 /* SceneDelegate.m */,
-				92842DE527D9CDDA0084A2A8 /* KeychainItemWrapper.h */,
-				92842DE427D9CDDA0084A2A8 /* KeychainItemWrapper.m */,
 				92842DBF27D61D600084A2A8 /* Utility */,
 				92842DBA27D600950084A2A8 /* ViewModels */,
 				92842DB527D5FC9F0084A2A8 /* Controllers */,
@@ -220,6 +227,7 @@
 		92842DBF27D61D600084A2A8 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				9227E246280424140058065D /* Keychain */,
 				92842DC827D634C20084A2A8 /* EmailValidation */,
 				92842DC427D634760084A2A8 /* PasswordValidation */,
 				92842DC027D61D720084A2A8 /* Alert */,
