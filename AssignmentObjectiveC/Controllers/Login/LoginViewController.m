@@ -11,6 +11,7 @@
 #import "DetailsViewController.h"
 #import "RegistrationViewController.h"
 #import "KeychainItemWrapper.h"
+#import "Constants.h"
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
@@ -40,14 +41,14 @@
     NSString *password = _passwordTextField.text;
     
     [loginObj loginWithEmail:email password:password completion:^(NSString* message) {
-        if ([message  isEqual: @"Email Required"]) {
-            [alert showAlertMsg:self title:@"Email" message:@"Email Is Required"];
-        } else if ([message  isEqual: @"Password Required"]) {
-            [alert showAlertMsg:self title:@"Password" message:@"Password Is Required"];
-        }  else if ([message  isEqual: @"Proper Email validate"]) {
-            [alert showAlertMsg:self title:@"Email" message:@"Enter Proper Email-id"];
-        } else if ([message  isEqual: @"Password Validate"]) {
-            [alert showAlertMsg:self title:@"Password" message:@"Password must be minimum 8 characters,at least 1 Uppercase Alphabet, 1 Lowercase Alphabet,1 Number and 1 Special Character"];
+        if ([message  isEqual: blank_Email]) {
+            [alert showAlertMsg:self title:emailText message:blank_Email];
+        } else if ([message  isEqual: blank_Password]) {
+            [alert showAlertMsg:self title:passwordText message:blank_Password];
+        }  else if ([message  isEqual: validate_Email]) {
+            [alert showAlertMsg:self title:emailText message:validate_Email_Message];
+        } else if ([message  isEqual: validate_Password]) {
+            [alert showAlertMsg:self title:passwordText message:validate_Password_Message];
         } else {
             KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"YourAppLogin" accessGroup:nil];
             NSData *password22 = [keychainItem objectForKey:(__bridge id)kSecValueData];
@@ -56,7 +57,7 @@
             if ([self.emailTextField.text isEqual:emailData] && [self.passwordTextField.text isEqual:passwordValue]) {
                 [self navigateToDetailsVC];
             } else {
-                [alert showAlertMsg:self title:@"Alert" message:@"User Not Found"];
+                [alert showAlertMsg:self title:alertMessage message:userNotFound];
             }
             
         }

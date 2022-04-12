@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9227E24A28042B4B0058065D /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9227E24928042B4B0058065D /* Constants.m */; };
 		92842D8227D5CAD90084A2A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92842D8127D5CAD90084A2A8 /* AppDelegate.m */; };
 		92842D8527D5CAD90084A2A8 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92842D8427D5CAD90084A2A8 /* SceneDelegate.m */; };
 		92842D8B27D5CAD90084A2A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92842D8927D5CAD90084A2A8 /* Main.storyboard */; };
@@ -51,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9227E24828042B4B0058065D /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		9227E24928042B4B0058065D /* Constants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		92842D7D27D5CAD90084A2A8 /* AssignmentObjectiveC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssignmentObjectiveC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92842D8027D5CAD90084A2A8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		92842D8127D5CAD90084A2A8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -126,6 +129,15 @@
 				92842DE427D9CDDA0084A2A8 /* KeychainItemWrapper.m */,
 			);
 			path = Keychain;
+			sourceTree = "<group>";
+		};
+		9227E24728042B0A0058065D /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9227E24828042B4B0058065D /* Constants.h */,
+				9227E24928042B4B0058065D /* Constants.m */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		92842D7427D5CAD90084A2A8 = {
@@ -227,6 +239,7 @@
 		92842DBF27D61D600084A2A8 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				9227E24728042B0A0058065D /* Constants */,
 				9227E246280424140058065D /* Keychain */,
 				92842DC827D634C20084A2A8 /* EmailValidation */,
 				92842DC427D634760084A2A8 /* PasswordValidation */,
@@ -460,6 +473,7 @@
 				92842D8227D5CAD90084A2A8 /* AppDelegate.m in Sources */,
 				92842DDC27D86BFB0084A2A8 /* DetailsViewController.m in Sources */,
 				92842DD327D752EC0084A2A8 /* RegistrationViewModel.m in Sources */,
+				9227E24A28042B4B0058065D /* Constants.m in Sources */,
 				92842D9327D5CADB0084A2A8 /* main.m in Sources */,
 				92842D8527D5CAD90084A2A8 /* SceneDelegate.m in Sources */,
 				92842DE027D86C1B0084A2A8 /* DetailsTableViewCell.m in Sources */,
